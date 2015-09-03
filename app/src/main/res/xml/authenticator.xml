@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="au.com.finalconcept.tutorial.android"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_authenticator_name"
+    android:smallIcon="@drawable/ic_launcher">
+    <!--android:accountPreferences="@xml/account_preferences" -Add this line in the attributes if you want to have preferences -->
+</account-authenticator>

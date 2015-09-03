@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="camera_control_margin_bottom">8dp</dimen>
+    <dimen name="time_font_size">18sp</dimen>
+    <dimen name="date_font_size">14sp</dimen>
+
+    <dimen name="capture_button_size">96dp</dimen>
+    <dimen name="capture_button_padding">8dp</dimen>
+    <dimen name="access_code_input_size">24sp</dimen>
+    <dimen name="capture_button_height">96dp</dimen>
+
+    <dimen name="image_preview_height">20dp</dimen>
+    <dimen name="preview_logs_textSize">15sp</dimen>
+
+    <dimen name="activation_title_text_size">48sp</dimen>
+
+    <dimen name="face_image_size">64dp</dimen>
+    <dimen name="face_image_size_grid">96dp</dimen>
+
+    <dimen name="avatar_image_size">72dp</dimen>
+
+    <dimen name="action_bar">48dp</dimen>
+</resources>

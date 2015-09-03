@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FaceBundy</string>
+    <string name="app_authenticator_name">FaceBundy Account</string>
+    <string name="app_version">1.0.1</string>
+    <!-- Main UI -->
+    <string name="access_code_hint">Access code</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_switch_camera">Switch Camera</string>
+    <string name="action_enrol_face">Enroll Face</string>
+    <string name="action_delete_face">Delete Face</string>
+    <string name="action_show_enrolled_faces">Show Enrolled Faces</string>
+    <string name="button_text_timein">In</string>
+    <string name="button_text_timeout">Out</string>
+    <string name="title_changelog">Change log</string>
+    <string name="changelog_close">Close</string>
+    <string-array name="projects">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+    </string-array>
+    <string-array name="upload_interval">
+        <item>every 30 minutes</item>
+        <item>every hour</item>
+        <item>every 2 hours</item>
+        <item>every 4 hours</item>
+        <item>every 8 hours</item>
+        <item>every 16 hours</item>
+        <item>every day</item>
+    </string-array>
+    <string-array name="upload_interval_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="datetime_setup">
+        <item>Internet</item>
+        <item>Network Provider</item>
+        <item>GPS</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="datetime_setup_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="ntp_auto_sync_interval">
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>4 hours</item>
+    </string-array>
+    <string-array name="ntp_auto_sync_interval_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="gps_time_auto_sync_interval">
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>4 hours</item>
+    </string-array>
+    <string-array name="gps_time_auto_sync_interval_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="matching_threshold">
+        <item>0 (100% FAR)</item>
+        <item>12 (10% FAR)</item>
+        <item>24 (1% FAR)</item>
+        <item>36 (0.1% FAR)</item>
+        <item>48 (0.01% FAR)</item>
+        <item>60 (0.001% FAR)</item>
+        <item>72 (0.0001% FAR)</item>
+        <item>84 (0.00001% FAR)</item>
+        <item>96 (0.000001% FAR)</item>
+    </string-array>
+    <string-array name="matching_threshold_values">
+        <item>0</item>
+        <item>12</item>
+        <item>24</item>
+        <item>36</item>
+        <item>48</item>
+        <item>60</item>
+        <item>72</item>
+        <item>84</item>
+        <item>96</item>
+    </string-array>
+    <!-- PREFERENCES -->
+    <string name="pref_cat_licensing">Licensing</string>
+    <string name="pref_title_activate_license">Activate License</string>
+    <string name="pref_desc_activate_license">Activate the license by selecting the appropriate licensing method.</string>
+
+    <string name="pref_cat_basic">Basic</string>
+    <string name="pref_key_showlogs">pref_key_showlogs</string>
+    <string name="pref_title_showlogs">Show Time Logs</string>
+    <string name="pref_desc_showlogs">Allows you to display recent face time logs.</string>
+
+    <string name="pref_key_enable_face_enrollment">pref_key_enable_face_enrollment</string>
+    <string name="pref_title_enable_enrollment">Enable Face Enrollment</string>
+    <string name="pref_desc_enable_enrollment">Enable the enrollment of employee faces.</string>
+
+    <string name="pref_key_enable_realtime_upload">pref_key_enable_realtime_upload</string>
+    <string name="pref_title_enable_realtime_upload">Instant Time Log Upload</string>
+    <string name="pref_desc_enable_realtime_upload">Enable the instant upload of time logs.</string>
+
+    <string name="pref_key_enable_itineraries">pref_key_enable_itineraries</string>
+    <string name="pref_title_enable_itineraries">Enable Itineraries</string>
+    <string name="pref_desc_enable_itineraries">Enable encoding of itineraries.</string>
+
+    <string name="pref_key_time_logs">pref_key_time_logs</string>
+    <string name="pref_title_time_logs">Time Logs</string>
+    <string name="pref_desc_time_logs">This allows you to display employee time logs and manually upload them to server.</string>
+
+    <string name="pref_key_itineraries">pref_key_itineraries</string>
+    <string name="pref_title_itineraries">Itineraries</string>
+    <string name="pref_desc_itineraries">Allows you to view and manage itineraries.</string>
+
+    <string name="pref_title_datetime_manual">Configure Date and Time</string>
+    <string name="pref_key_datetime_manual">pref_key_datetime_manual</string>
+    <string name="pref_desc_datetime_manual">Sets the current date and time.</string>
+
+    <string name="pref_title_datetime">Sync Date and Time</string>
+    <string name="pref_key_datetime">pref_key_datetime</string>
+    <string name="pref_desc_datetime">Syncs the date and time settings from the server.</string>
+
+    <string name="pref_title_enable_projects">Enable Project Selection</string>
+    <string name="pref_desc_enable_projects">Employee has the option to choose a specific project to which he/she can log his/her time of work.</string>
+    <string name="pref_title_setup_projects">Setup Project List</string>
+    <string name="pref_desc_setup_projects">Allows you to edit the list of projects.</string>
+
+    <string name="pref_cat_data">Data and Cache</string>
+    <string name="pref_key_enrolled_faces">pref_key_enrolled_faces</string>
+    <string name="pref_title_enrolled_faces">Enrolled Faces</string>
+    <string name="pref_desc_enrolled_faces">Manages registered employee faces used for employee identification and matching.</string>
+    <string name="pref_key_clear_cache">pref_key_clear_cache</string>
+    <string name="pref_title_clear_cache">Clear Cache</string>
+    <string name="pref_desc_clear_cache">Clears the application cache including time logs and application settings.</string>
+    <string name="pref_title_clear_face_data">Clear Face Data</string>
+    <string name="pref_desc_clear_face_data">Deletes all the enrolled faces.</string>
+
+    <string name="pref_cat_network">Network and Date/Time Synchronization</string>
+    <string name="pref_title_wifi_only_upload">Wifi Only Upload</string>
+    <string name="pref_desc_wifi_only_upload">The face data and or time logs will only be uploaded when the active network is on WiFi.</string>
+
+    <string name="pref_title_server_host">Server Host URL</string>
+    <string name="pref_key_server_host">pref_key_server_host</string>
+    <string name="pref_desc_server_host">Specify the server host URL to where the face ids and time logs will be uploaded.</string>
+
+    <string name="pref_key_admin_pin">pref_key_admin_pin</string>
+    <string name="pref_title_admin_pin">Change Administrator PIN</string>
+    <string name="pref_desc_admin_pin">Sets the PIN to access administrative settings.</string>
+
+    <string name="pref_key_max_access_code_length">pref_key_max_access_code_length</string>
+    <string name="pref_title_max_access_code_length">Max Access Code Length</string>
+    <string name="pref_desc_max_access_code_length">Sets the maximum access code length.</string>
+
+    <string name="pref_cat_advanced">Administration &amp; Security</string>
+    <string name="pref_title_biometrics_config">Biometrics Configurations</string>
+    <string name="pref_desc_biometrics_config">Tweaks the configuration of the face biometrics.</string>
+
+    <string name="pref_key_employee_list">pref_key_employee_list</string>
+    <string name="pref_title_employee_list">Employee List</string>
+    <string name="pref_desc_employee_list">Shows the list of employees.</string>
+
+    <string name="pref_cat_about">About</string>
+    <string name="pref_title_version">Version</string>
+    <string name="pref_title_changelog">Change Log</string>
+    <string name="pref_desc_changelog">Displays the release notes.</string>
+    <!-- ACTIVITIES -->
+    <string name="preferences_title">Settings</string>
+    <string name="enrollment_activity_title">Enrol Face Id</string>
+
+    <string name="pref_title_server_host_test">Test Server Host URL Connectivity</string>
+    <string name="pref_key_server_host_test">pref_key_server_host_test</string>
+    <string name="pref_desc_server_host_test">Tests the server host connectivity.</string>
+
+    <string name="pref_title_auto_upload">Auto Upload Time Logs</string>
+    <string name="pref_key_auto_upload">pref_key_auto_upload</string>
+    <string name="pref_desc_auto_upload">Automatically upload time logs.</string>
+
+    <string name="pref_title_auto_upload_sched">Auto Upload Time Log Interval</string>
+    <string name="pref_key_auto_upload_sched">pref_key_auto_upload_sched</string>
+    <string name="pref_desc_auto_upload_sched">Sets the auto upload time log interval.</string>
+</resources>
+

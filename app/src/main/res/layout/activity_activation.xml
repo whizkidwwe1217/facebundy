@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    tools:context=".ActivationActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imgHeader"
+        android:src="@drawable/activation_bg"
+        android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/headerContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="2dp"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgLogo"
+                    android:src="@drawable/face_bundy_header"
+                    android:scaleType="centerCrop"
+                    android:padding="48dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/inputContainer"
+                android:orientation="vertical"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:paddingBottom="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtActivationName"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:hint="Name"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textColorHint="#5f72b7ff"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtActivationCode"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:hint="Code"
+                    android:textColorHint="#5f72b7ff"
+                    android:layout_gravity="center_horizontal" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/btnActivate"
+                    android:background="@android:color/holo_blue_dark"
+                    android:text="Activate"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

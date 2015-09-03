@@ -1,0 +1,2 @@
+include ':app', ':floatingbutton'
+project(':floatingbutton').projectDir = new File('components/floatingbutton')

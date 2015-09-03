@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_unknown_license_status">Unknown licensing status.</string>
+    <string name="msg_sdcard_not_ready_for_reading">SD card not read for reading.</string>
+
+    <string name="msg_format_log">Log:\n%1$s</string>
+    <string name="msg_format_configuration">Configuration:\n%1$s</string>
+    <string name="msg_format_status">Status: %1$s</string>
+    <string name="msg_format_trial">Trial: %1$s</string>
+</resources>

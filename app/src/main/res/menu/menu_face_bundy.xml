@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FaceBundyActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_itineraries"
+        android:icon="@drawable/ic_action_task_white"
+        android:orderInCategory="100"
+        android:title="Itineraries"
+        app:showAsAction="always|withText" />
+    <item android:id="@+id/action_switch_camera"
+        android:title="Switch Camera"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_action_camera"
+        app:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/action_show_my_logs"
+        android:title="My Logs"
+        android:icon="@drawable/ic_action_time"
+        android:orderInCategory="99"
+        app:showAsAction="ifRoom|withText" />
+</menu>

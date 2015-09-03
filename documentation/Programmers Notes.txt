@@ -1,0 +1,83 @@
+Author  : Wendell Wayne Estrada
+Date    : 3/27/2015
+==============================================
+
+I. Developer Hacks
+----------------------------
+A. Edition Switcher
+   1. Place a 'switch.dat' file to the application's cache directory.
+   2. The content of the file should contain either 1, 2, or 3.
+   3. The number corresponds the the app's edition number.
+      ex.:
+           File     : switch.dat
+           Content  : 3
+           Path     : sdcard/data/jeonsoft/switch.dat
+
+
+B. Basic Recommendations for Facial Recognition
+
+Basic Recommendations for Facial Recognition
+
+Face recognition accuracy of VeriLook and MegaMatcher heavily depends on the quality of a face image. Image quality during enrollment is important, as it influences the quality of the face template.
+There are some basic recommendations and constraints when using face recognition applications based on MegaMatcher SDK or VeriLook SDK. Note that some of these recommendations may be not valid for surveillance application based on VeriLook Surveillance SDK.
+
+Cameras and Images
+===============================================
+ - Similar quality cameras are recommended for both enrollment and identification. Using the same camera model is even better.
+ - 50 pixels is the recommended minimal distance between eyes for a face on image or video stream to perform face template extraction. 75 pixels or more recommended for better face recognition results. Note that this distance should be native, not achieved by resizing an image.
+ - 640 x 480 pixels minimal camera resolution is recommended for face enrollment and recognition:
+    > Make sure that native 640 x 480 resolution is provided by a webcam or a smartphone camera, as some of these cameras may have lower resolution that is later scaled up to 640 x 480 without image quality improvement. While it is acceptable for video calls or occasional photos, it will introduce additional distortions and artifacts to the face image.
+    > Lower resolution webcams are not recommended as optical distortions will appear and affect facial template quality because users will have to be too close to the cameras for successful face detection and enrollment.
+ - Check for mirrored face images, as recognition will fail if a face was enrolled from a mirrored image, and later a non-mirrored face image is used for recognition (or vice versa). This happens as some cameras or devices can be configured to produce mirrored images or may even produce them by default, and different cameras or configurations may be used during enrollment and identification. We recommend to use face images with uniform orientation – all images within a system should be either native or mirrored, but not mixed between each other.
+ - Use several images during enrollment, as it improves facial template quality which results in improvement of recognition quality and reliability.
+
+Lighting
+===============================================
+Controlled lighting conditions are recommended:
+- Direct frontal or diffused light allows equal lighting distribution on each side of the face and from top to bottom with no significant shadows within the face region.
+- Avoid glares on face skin or glasses that are produced by some types of illumination.
+
+Face Posture
+===============================================
+The face recognition engine has certain tolerance to face posture:
+- head roll (tilt) – ±180 degrees (configurable);
+    > ±15 degrees default value is the fastest setting which is usually sufficient for most near-frontal face images.
+- head pitch (nod) – ±15 degrees from frontal position.
+    > The head pitch tolerance can be increased up to ±25 degrees if several views of the same face that covered different pitch angles were used during enrollment.
+- head yaw (bobble) – ±45 degrees from frontal position (configurable).
+    > ±15 degrees default value is the fastest setting which is usually sufficient for most near-frontal face images.
+    > 30 degrees difference between a face template in a database and a face image from camera is acceptable.
+    > Several views of the same face can be enrolled to the database to cover the whole ±45 degrees yaw range from frontal position.
+
+Facial Expression
+===============================================
+Neutral face expression during enrollment is recommended, as non-neutral face expression may affect the accuracy of recognition. Examples of non-neutral face expressions (they are allowed but not recommended):
+ > Broad smile (when teeth or the inside of the mouth exposed).
+ > Raised eyebrows.
+ > Closed eyes.
+ > Eyes looking away from the camera.
+ > Frown.
+Slight changes in facial expression are acceptable during identification, as they do not influence the accuracy of face recognition.
+
+Live Face Detection
+===============================================
+A stream of consecutive images (usually a video stream from a camera) is required for face liveness check:
+- At least 10 frames are required. 10 - 25 frames are recommended.
+- Only one face should be visible in these frames.
+- When the liveness check is enabled, it is performed automatically during extraction. If the face in the stream fails to qualify as "live", the features are not extracted.
+- Liveness score can be maximized with these actions done separately or together:
+    > moving the head around a bit;
+    > tilting the head;
+    > moving the head closer to or further from the camera;
+    > slightly changing the facial expression.
+For example, user should start with the head panned as far left as possible but still detectable by face detection and start panning it slowly right while slightly changing the facial expression until he/she pans as far right as possible (but still detectable by face detector).
+
+Glasses, Makeup, Hair, Beard and Moustache
+===============================================
+Several images with different appearance variants are recommended for assuring the quality of recognition in the situations when part of face is covered with glasses or hair:
+- Eyeglasses – separate enrollments with and without glasses will assure the best recognition quality for both cases. Special recommendations:
+    > Sunglasses and regular glasses with heavy frames will decrease recognition quality, as they cover part of face and some facial features become not visible. If possible, they should be avoided during both enrollment and identification.
+    > Contact lens – the contact lens do not affect the recognition quality. Hovewer, persons wearing them sometimes may wear eyeglasses, instead of lens. In this case an additional enrollment with eyeglasses is recommended.
+- Heavy makeup is not recommended as it can hide or distort facial features.
+- Hair style – some hair styles may cover parts of face, thus hairpins or other means of holding hair off the face are recommended during enrollment.
+- Facial hair style changes may require additional enrollments, especially when beard or moustache is grown or shaved off.

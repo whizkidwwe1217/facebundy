@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ItineraryListActivity">
+    <com.jeonsoft.facebundypro.widgets.PinnedSectionListView
+        android:id="@+id/lvItinerary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/btnNewLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/lvItinerary"
+        android:layout_marginLeft="24dp"
+        android:background="#1E88E5"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_action_add" />
+</RelativeLayout>

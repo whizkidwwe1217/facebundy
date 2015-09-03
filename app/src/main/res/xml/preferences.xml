@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_key_basic"
+        android:title="@string/pref_cat_basic">
+        <CheckBoxPreference
+            android:key="@string/pref_key_showlogs"
+            android:summary="@string/pref_desc_showlogs"
+            android:title="@string/pref_title_showlogs" />
+        <CheckBoxPreference
+            android:key="@string/pref_key_enable_face_enrollment"
+            android:summary="@string/pref_desc_enable_enrollment"
+            android:title="@string/pref_title_enable_enrollment" />
+        <CheckBoxPreference
+            android:key="@string/pref_key_enable_itineraries"
+            android:summary="@string/pref_desc_enable_itineraries"
+            android:title="@string/pref_title_enable_itineraries" />
+        <CheckBoxPreference
+            android:key="@string/pref_key_enable_realtime_upload"
+            android:summary="@string/pref_desc_enable_realtime_upload"
+            android:title="@string/pref_title_enable_realtime_upload" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_data"
+        android:title="@string/pref_cat_data">
+        <Preference
+            android:key="@string/pref_key_enrolled_faces"
+            android:summary="@string/pref_desc_enrolled_faces"
+            android:title="@string/pref_title_enrolled_faces" />
+        <Preference
+            android:key="@string/pref_key_time_logs"
+            android:summary="@string/pref_desc_time_logs"
+            android:title="@string/pref_title_time_logs" />
+        <Preference
+            android:key="@string/pref_key_itineraries"
+            android:summary="@string/pref_desc_itineraries"
+            android:title="@string/pref_title_itineraries" />
+        <Preference
+            android:key="@string/pref_key_employee_list"
+            android:summary="@string/pref_desc_employee_list"
+            android:title="@string/pref_title_employee_list" />
+        <!--<Preference
+            android:key="@string/pref_key_clear_cache"
+            android:title="@string/pref_title_clear_cache"
+            android:summary="@string/pref_desc_clear_cache" />
+        <Preference
+            android:key="pref_key_clear_employee_face_data"
+            android:title="@string/pref_title_clear_face_data"
+            android:summary="@string/pref_desc_clear_face_data" />-->
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_network"
+        android:title="@string/pref_cat_network">
+        <PreferenceScreen
+            android:key="date_time_preference"
+            android:summary="Configures the date and time synchronization."
+            android:title="Date and Time Settings">
+
+            <PreferenceCategory android:title="General">
+                <Preference
+                    android:key="pref_key_datetime"
+                    android:summary="@string/pref_desc_datetime"
+                    android:title="@string/pref_title_datetime" />
+                <ListPreference
+                    android:defaultValue="0"
+                    android:entries="@array/datetime_setup"
+                    android:entryValues="@array/datetime_setup_values"
+                    android:key="@string/pref_key_datetime_manual"
+                    android:summary="@string/pref_desc_datetime_manual"
+                    android:title="@string/pref_title_datetime_manual" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="NTP Date and Time Synchronization">
+                <EditTextPreference
+                    android:defaultValue="pool.ntp.org"
+                    android:key="pref_key_ntp_server"
+                    android:summary="Sets the ntp server used to synchronize time."
+                    android:title="NTP Server" />
+                <EditTextPreference
+                    android:defaultValue="1000"
+                    android:key="pref_key_ntp_timeout"
+                    android:summary="Sets how long before the server will return an error when synchronizing time takes a little while longer."
+                    android:title="NTP Timeout" />
+                <CheckBoxPreference
+                    android:key="pref_key_enable_auto_sync_ntp"
+                    android:summary="Enables the automatic synching of time from the NTP server."
+                    android:title="Auto-sync NTP Server Time" />
+                <ListPreference
+                    android:defaultValue="0"
+                    android:dependency="pref_key_enable_auto_sync_ntp"
+                    android:entries="@array/ntp_auto_sync_interval"
+                    android:entryValues="@array/ntp_auto_sync_interval_values"
+                    android:key="pref_key_ntp_autosync_interval"
+                    android:summary="Sets the time interval of the automatic NTP server synchronization."
+                    android:title="Auto-sync NTP Server Interval" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="GPS Time">
+                <Preference
+                    android:key="pref_key_sync_gps_time"
+                    android:summary="Synchronizes time via GPS location."
+                    android:title="Sync Time via GPS" />
+                <CheckBoxPreference
+                    android:key="pref_key_enable_auto_sync_gps"
+                    android:title="Auto-sync GPS Time"
+                    android:summary="Automatically synchronizes time based on the current GPS location of this device."
+                    android:defaultValue="true"/>
+                <ListPreference
+                    android:defaultValue="0"
+                    android:dependency="pref_key_enable_auto_sync_gps"
+                    android:entries="@array/gps_time_auto_sync_interval"
+                    android:entryValues="@array/gps_time_auto_sync_interval_values"
+                    android:key="pref_key_gps_time_autosync_interval"
+                    android:summary="Sets the time interval of the automatic GPS time synchronization."
+                    android:title="Auto-sync GPS Time Interval" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <CheckBoxPreference
+            android:key="@string/pref_key_auto_upload"
+            android:summary="@string/pref_desc_auto_upload"
+            android:title="@string/pref_title_auto_upload" />
+        <ListPreference
+            android:defaultValue="8"
+            android:entries="@array/upload_interval"
+            android:entryValues="@array/upload_interval_values"
+            android:key="@string/pref_key_auto_upload_sched"
+            android:summary="@string/pref_desc_auto_upload_sched"
+            android:title="@string/pref_title_auto_upload_sched" />
+        <CheckBoxPreference
+            android:key="pref_key_wifi_only_upload"
+            android:summary="@string/pref_desc_wifi_only_upload"
+            android:title="@string/pref_title_wifi_only_upload" />
+
+        <EditTextPreference
+            android:key="@string/pref_key_server_host"
+            android:summary="@string/pref_desc_server_host"
+            android:title="@string/pref_title_server_host" />
+        <Preference
+            android:key="@string/pref_key_server_host_test"
+            android:summary="@string/pref_desc_server_host_test"
+            android:title="@string/pref_title_server_host_test" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_advanced"
+        android:title="@string/pref_cat_advanced">
+        <Preference
+            android:key="@string/pref_key_admin_pin"
+            android:summary="@string/pref_desc_admin_pin"
+            android:title="@string/pref_title_admin_pin" />
+        <CheckBoxPreference
+            android:key="key_pref_enable_admin_pin"
+            android:title="Enable Settings PIN"
+            android:defaultValue="true"
+            android:summary="Requires a PIN to access the application settings." />
+        <EditTextPreference
+            android:key="@string/pref_key_max_access_code_length"
+            android:summary="@string/pref_desc_max_access_code_length"
+            android:title="@string/pref_title_max_access_code_length" />
+        <PreferenceScreen
+            android:key="pref_key_biometrics"
+            android:persistent="false"
+            android:title="@string/pref_title_biometrics_config"
+            android:summary="@string/pref_desc_biometrics_config">
+            <ListPreference
+                android:key="pref_key_matching_threshold"
+                android:defaultValue="24"
+                android:entries="@array/matching_threshold"
+                android:entryValues="@array/matching_threshold_values"
+                android:summary="The minimum score that verification and identification functions accept to assume that the compared face belong to the same person."
+                android:title="Matching Threshold"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <!--<PreferenceCategory
+        android:title="@string/pref_cat_licensing"
+        android:key="pref_key_licensing">
+        <Preference
+            android:key="pref_key_activate_license"
+            android:title="@string/pref_title_activate_license"
+            android:summary="@string/pref_desc_activate_license" />
+    </PreferenceCategory>-->
+    <PreferenceCategory
+        android:key="pref_key_about"
+        android:title="@string/pref_cat_about">
+        <Preference
+            android:summary="FaceBundy.JeonSoft Corporation.Edition 1."
+            android:title="Product Information" />
+        <Preference
+            android:summary="@string/pref_desc_changelog"
+            android:key="pref_key_change_log"
+            android:title="@string/pref_title_changelog" />
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/pref_title_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

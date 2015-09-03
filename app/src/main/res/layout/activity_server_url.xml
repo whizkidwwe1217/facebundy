@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/edtUrl"
+        android:hint="Type server host url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:orientation="horizontal"
+        android:layout_below="@+id/edtUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Local"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Internet"
+            android:checked="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_below="@+id/rgType"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnAddUrl"
+        android:background="@color/pale_green"
+        android:text="Add"
+        android:layout_height="40dp"/>
+    <TextView
+        android:id="@+id/tvHosts"
+        android:layout_below="@+id/btnAddUrl"
+        android:text="Server hosts:"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:layout_below="@id/tvHosts"
+        android:id="@+id/lvUrls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</RelativeLayout>

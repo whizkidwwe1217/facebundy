@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <FrameLayout android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <com.jeonsoft.facebundypro.views.CameraFacePreview
+            android:id="@+id/surface"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_margin="0dp"
+            android:background="@drawable/gradient_fade"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgImagePreview"
+                android:layout_width="120px"
+                android:layout_margin="10dp"
+                android:layout_height="120px"
+                android:scaleType="centerCrop"
+                app:border_width="1dp"
+                app:border_color="#ffb7bec8" />
+            <TextView android:id="@+id/tvNetworkTime"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageView android:id="@+id/imgSwitchCamera"
+                    android:layout_height="48dp"
+                    android:layout_gravity="right"
+                    android:tint="@color/white"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_action_switch_camera"/>
+                <ImageView android:id="@+id/imgShowTimeLogs"
+                    android:layout_height="48dp"
+                    android:layout_width="48dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_action_logs"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0"
+            android:orientation="vertical"
+            android:padding="4pt"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtEmployeeCode"
+                android:textAlignment="center"
+                android:background="@null"
+                android:textSize="@dimen/access_code_input_size"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:singleLine="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:numeric="integer"
+                android:maxLength="4"
+                android:layout_width="wrap_content"
+                android:minWidth="120pt"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.jeonsoft.facebundypro.views.CircleButton
+                    android:layout_width="@dimen/capture_button_size"
+                    android:id="@+id/btnCaptureIn"
+                    app:cb_text="Time In"
+                    android:src="@drawable/ic_action_clock_in"
+                    app:cb_color="@color/green"
+                    app:cb_pressed_ring_width="8dip"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/capture_button_size"/>
+                <LinearLayout
+                    android:padding="@dimen/capture_button_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </LinearLayout>
+                <com.jeonsoft.facebundypro.views.CircleButton
+                    android:layout_width="@dimen/capture_button_size"
+                    android:id="@+id/btnCaptureOut"
+                    app:cb_text="Time Out"
+                    android:src="@drawable/ic_action_clock_out"
+                    app:cb_color="@color/red"
+                    app:cb_pressed_ring_width="8dip"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/capture_button_size"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+

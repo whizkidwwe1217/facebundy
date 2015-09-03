@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neurotec-licensing-android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/neurotec-licensing-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

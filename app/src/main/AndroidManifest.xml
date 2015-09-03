@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="@string/app_version"
+    package="com.jeonsoft.facebundypro" >
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="org.ntpsync.permission.GET_TIME" />
+    <uses-permission android:name="org.ntpsync.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@drawable/face_bundy_launcher"
+        android:label="@string/app_name"
+        android:name=".FaceBundyProApp"
+        android:theme="@style/AppBlueTheme" >
+        <activity android:name="com.jeonsoft.facebundypro.views.DateTimeConfigActivity"
+
+            android:label="Configure Date and Time"/>
+        <activity android:name="com.jeonsoft.facebundypro.views.EmployeeListActivity" android:theme="@style/AppBlueTheme"
+
+            android:parentActivityName="com.jeonsoft.facebundypro.SettingsActivity"
+            android:label="Employee List"/>
+        <activity android:name=".views.ItineraryProjectListActivity" android:theme="@style/AppBlueTheme" android:label="Itinerary" android:parentActivityName=".FaceBundyActivity" />
+        <activity android:name=".views.ItineraryProjectItemActivity" android:theme="@style/AppBlueTheme" android:label="Itinerary Time Log" android:parentActivityName=".views.ItineraryProjectListActivity" />
+
+
+        <activity
+
+            android:name=".FaceBundyActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBlueTheme"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.jeonsoft.facebundypro.views.BigPreview"/>
+        <activity android:name="com.jeonsoft.facebundypro.ActivationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:parentActivityName="com.jeonsoft.facebundypro.FaceBundyActivity"
+            android:theme="@style/AppThemeFullScreen"/>
+        <activity android:name="com.jeonsoft.facebundypro.FaceEnrollmentActivity"
+            android:icon="@drawable/ic_launcher"
+
+            android:label="@string/enrollment_activity_title">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".views.ItineraryListActivity" android:theme="@style/AppBlueTheme" android:label="Itinerary" android:parentActivityName=".FaceBundyActivity" />
+        <activity android:name="com.jeonsoft.facebundypro.views.LogsReportActivity" android:theme="@style/AppBlueTheme"
+            android:parentActivityName="com.jeonsoft.facebundypro.SettingsActivity"
+            android:label="Time Logs" />
+        <activity android:name="com.jeonsoft.facebundypro.views.SubjectManager" android:theme="@style/AppBlueTheme"
+            android:parentActivityName="com.jeonsoft.facebundypro.SettingsActivity"
+            android:label="Face Template Manager" />
+        <activity android:name="com.jeonsoft.facebundypro.SettingsActivity"
+            android:configChanges="keyboardHidden|screenLayout"
+
+            android:label="@string/preferences_title"
+            android:parentActivityName="com.jeonsoft.facebundypro.FaceBundyActivity" />
+        <service android:name="com.jeonsoft.facebundypro.uploadservice.TimelogService" android:enabled="true" android:exported="false" />
+        <service android:name="com.jeonsoft.facebundypro.uploadservice.SubjectDownloadService" android:enabled="true" android:exported="false" />
+        <service android:name="com.jeonsoft.facebundypro.views.SubjectManagerService" android:enabled="true" android:exported="false" />
+        <service android:name="com.jeonsoft.facebundypro.uploadservice.EmployeeListDownloadService" android:enabled="true" android:exported="false" />
+        <service android:name="com.jeonsoft.facebundypro.authentication.AuthenticationService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"></action>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"></meta-data>
+        </service>
+        <service
+            android:name="com.neurotec.licensing.NPGService"
+            android:enabled="true"
+            android:process="com.neurotec.licensing.NPGService" >
+            <intent-filter>
+                <action android:name="com.neurotec.licensing.NPGService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.neurotec.licensing.NIDGenService"
+            android:enabled="true"
+            android:process="com.neurotec.licensing.NIDGenService" >
+            <intent-filter>
+                <action android:name="com.neurotec.licensing.NIDGenService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.neurotec.licensing.NPGMonitor"
+            android:enabled="true"
+            android:process="com.neurotec.licensing.NPGMonitor" >
+            <intent-filter>
+                <action android:name="com.neurotec.licensing.NPGMonitor" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.jeonsoft.facebundypro.uploadservice.UploadService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.jeonsoft.facebundypro.uploadservice.action.upload"/>
+            </intent-filter>
+        </service>
+        <service android:name=".uploadservice.SubjectMultiPartUploadService" android:enabled="true" android:exported="false" />
+        <receiver android:name=".FaceBundyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget" />
+        </receiver>
+        <service android:name=".location.FetchAddressIntentService" android:enabled="true" android:exported="false"/>
+        <service android:name=".uploadservice.ItinerariesUploadService" android:enabled="true" android:exported="false" />
+
+        <receiver  android:name = ".utils.BatteryLevelReceiver" >
+            <intent-filter>
+                <action  android:name = "android.intent.action.ACTION_BATTERY_LOW" />
+                <action  android:name = "android.intent.action.ACTION_BATTERY_OKAY" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,360 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/royal_blue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+    <com.gc.materialdesign.views.ProgressBarIndeterminate
+        android:id="@+id/progress"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="2dp"
+        android:background="@color/accent_color" />
+
+    <LinearLayout
+        android:id="@+id/camera_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llAccessCode"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.neurotec.biometrics.view.NFaceView
+                    android:id="@+id/camera_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/royal_blue"></com.neurotec.biometrics.view.NFaceView>
+
+                <RelativeLayout
+                    android:background="@color/transparent_royal_blue"
+                    android:visibility="gone"
+                    android:id="@+id/battery_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="300px"
+                            android:layout_height="193px"
+                            android:alpha="0.5"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/low_battery" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/pale_red"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Large"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Battery Critically Low!" />
+                        <TextView
+                            android:id="@+id/tvBatteryDesc"
+                            android:text="Please connect your charger now."
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/light_primary"
+                            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_date_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent_royal_blue"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="8dp">
+
+                        <ImageView
+                            android:id="@+id/imgDateTimeWarningCompact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:paddingLeft="16dp"
+                            android:src="@drawable/ic_action_warning"
+                            android:visibility="gone" />
+                        <TextView
+                            android:id="@+id/tvLastSync"
+                            android:textSize="10sp"
+                            android:paddingLeft="16dp"
+                            android:text="last synched from Unknown"
+                            android:textColor="@color/accent_color"
+                            android:layout_toRightOf="@id/imgDateTimeWarningCompact"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_app_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:paddingRight="8dp"
+                            android:shadowColor="@color/light_gray"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:text="Feb 18, 2015"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/date_font_size" />
+
+                        <TextView
+                            android:id="@+id/tv_app_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_app_date"
+                            android:layout_gravity="right"
+                            android:paddingRight="8dp"
+                            android:shadowColor="@color/light_gray"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:text="00:00:00"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/time_font_size" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlDateTimeWarning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgDateTimeWarningIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_action_warning" />
+
+                        <TextView
+                            android:id="@+id/tvDateTimeWarning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imgDateTimeWarningIcon"
+                            android:gravity="fill"
+                            android:padding="4dp"
+                            android:text="Looks like the app and the phone's date and time settings are not synchronized. If you're not sure about the accuracy of the app's date and time, tap the SYNC button."
+                            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                            android:textColor="#ffd6f7ff" />
+
+                        <com.gc.materialdesign.views.ButtonFlat
+                            android:id="@+id/btnDateTimeDismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDateTimeWarning"
+                            android:layout_toLeftOf="@+id/btnDateTimeSync"
+                            android:layout_weight="1"
+                            android:background="#ffd6f7ff"
+                            android:text="Hide" />
+
+                        <com.gc.materialdesign.views.ButtonFlat
+                            android:id="@+id/btnDateTimeSync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tvDateTimeWarning"
+                            android:layout_weight="1"
+                            android:background="#ffd6f7ff"
+                            android:text="Sync" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:padding="2dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgImagePreview"
+                                android:layout_width="120px"
+                                android:layout_height="120px"
+                                android:layout_margin="10dp"
+                                android:scaleType="centerCrop"
+                                app:border_color="#ffb7bec8"
+                                app:border_width="1dp" />
+
+                            <TextView
+                                android:id="@+id/tvNetworkTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text=""
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvEmployeeName"
+                            style="@android:style/TextAppearance.Holo.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/accent_color" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAccessCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="92dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type your access code here:"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jeonsoft.facebundypro.widgets.DelayAutoCompleteTextView
+                android:id="@+id/edtAccessCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/access_code_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/royal_blue_hint"
+                android:textSize="@dimen/access_code_input_size" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_indicator"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/famCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        fab:fab_addButtonColorNormal="@color/accent_color"
+        fab:fab_addButtonColorPressed="@color/blue_semi_transparent_pressed"
+        fab:fab_addButtonIcon="@drawable/ic_action_camera"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_addButtonSize="normal"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_expandDirection="up"
+        fab:fab_labelStyle="@style/capture_floating_control_style"
+        fab:fab_useCustomDrawable="true">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/pale_green"
+            fab:fab_colorPressed="#ff80ffb8"
+            fab:fab_icon="@drawable/ic_action_clock_in"
+            fab:fab_size="normal"
+            fab:fab_title="Time In" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/pale_red"
+            fab:fab_colorPressed="#ffffc6bf"
+            fab:fab_icon="@drawable/ic_action_clock_out"
+            fab:fab_size="normal"
+            fab:fab_title="Time Out" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEnroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#ffd288ce"
+            fab:fab_colorPressed="@color/pink_pressed"
+            fab:fab_icon="@drawable/ic_action_enroll"
+            fab:fab_size="mini"
+            fab:fab_title="Enroll" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/dark_primary"
+            fab:fab_colorPressed="@color/primary"
+            fab:fab_icon="@drawable/ic_action_verify"
+            fab:fab_size="mini"
+            fab:fab_title="Verify" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="preview_log_textSize">22</integer>
+    <integer name="preview_log_title_textSize">18</integer>
+
+</resources>

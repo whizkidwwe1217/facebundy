@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\whizk\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-2e0a4c748167d3e2458ce25dadb05f3ffd0e137e.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ca03d2e4c0640f9f40300000ee151febcee78f1f.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-core-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="058ac86d426cdc8b5f46476dce5cbb3b326ed9ca">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-core-android-3b5a4f26ccfebeacfc8dc3aa0cfa5a35388f8e9d.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-930dd3d3c6ca6eb564ef1b6b32347ab0983c66ca.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-devices-media-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2d01ba135c015c19b24a7558338fca1d6d222847">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-devices-media-android-27cd7c92bb4ec7fa302ea2e26e3cba797dbfccba.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-media-processing-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a7a9879f507f6bd7b9e2098a686c9e9ac0e097ae">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-media-processing-android-1947a990a1700da88f5512e6002d273e974ed744.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-cluster-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="647159dc1117760c348b5945ccc91a1ad215121e">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-cluster-android-d31844f8fc8a495aea4c29f20a5df993a22752ed.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.github.navasmdc\MaterialDesign\1.4\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="87405405e403de68f4057757b8a2e8de02bd65d0">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-f9fe8ff480427f7d12680a0453d0e151db6ccb05.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-biometrics-gui-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3cb6f77365c68fcbe7d8d45fa91c0445876e21db">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-biometrics-gui-android-6c13f53eb81006fef668960b52ae933e13e821bc.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\FaceBundy Edition 2 and 3\floatingbutton\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="35770dc86f2df553dc110cf0a1057cda73f3d395">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-09516df943d7d178819490c13c6db72b2e2e0c1a.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.github.amlcurran.showcaseview\library\5.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8b3d9a7b348d8bcfb4d740dfaf70bc374cdae9d6">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-7831db8aa957a99ef46f59434ba0989e779bc98c.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-media-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="daf68fd1d30c99b8eb8c17923adf2f198a495ab7">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-media-android-a67aff94f4bdb44ad83aaa01395acc951dc08052.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\commons-net-3.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cd0d5510908225f76c5fe5a3f1df4fa44866f81e">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\commons-net-3.3-3b3787736b7f8559418912ec5068f5f2ac1bfdb4.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-1e074f23be470f147b6196ebc1d92e90b7a0b516.jar" />
+    </item>
+    <item
+        jar="C:\Users\whizk\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\library-2.4.0-a6b8395116d6a2bba47b38f13554be47b3e4f368.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-5e9c33a96e4c938b880ecffa64842c856cca1a72.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-biometrics-client-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="441004a54a951a3acde1d96a1ae7a4047c2a9639">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-biometrics-client-android-018c0fa62a94045ffb72589f0c36d61261bfb786.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-biometrics-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7b72fe4929f202ea58844d2ceabddd1512426f98">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-biometrics-android-cc3526187163014055e6d8c3a0cf197ec3087390.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5a8e01742aee890c56fe638ea7c921b91a3fdc62">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-c0d835e3e765569b5becbcf25f0f546bc3ece82e.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-devices-virtual-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fb31f0dc9f763eb23f39af9e5cd083b3378a664b">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-devices-virtual-android-f2ebb3b6ba26456d9ff4b4f7607470121c56924c.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\acra.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44a5eb946e0d83eed4a0128d877ca1fd8168b83a">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\acra-74946da6f4400ec8fb26277fbb28084a2fa4a3db.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\jna.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f1bf9fe267e17c1a8f7d1aa2c985e7fe81a06da6">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\jna-ddcff87746499c3b2b5e18db8865b6eaf290b2e8.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-devices-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="43c4f3abc64a2944143b44ef10e7e187d189f689">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-devices-android-13ac61b3b8c27e38a07e22f8e367f42720d5db46.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0c0c19759e5868604a3b4c2c0074ee9404d73c76">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-405882294b08d703fa064200b484e7f4713f6d8d.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.amulyakhare\com.amulyakhare.textdrawable\1.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d237556caead5b93d97e18a071059a2c0045978e">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-f445fc5f1a58c6aba8207ab29c6945a233a1871a.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="803c4c913beac8f7980d680c725a40835d1d7c77">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-61a0f6e6c62636b977ef2722ddc89ba49b77b22a.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-licensing-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba6055e1a416d95cda9ab01623ad4a8174bbd74a">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-licensing-android-607cc640fde3647728c16c715e53c46f50f18ab2.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-b6613daed976f4d0880f5017c3a89960d681c041.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-7a6585deaa6fca5602ce53c3e327accdad02e15f.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\libs\neurotec-gui-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5ca86f2ce0f70fc1ce22d0017fae10cab1a9a75b">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\neurotec-gui-android-fe567e9031d3099b607f548f1f2588f744e726f9.jar" />
+    </item>
+    <item
+        jar="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\exploded-aar\com.github.citux\datetimepicker\0.1.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="817ea7c569301beb1c81f6ac9c440664b7b92827">
+        <dex dex="D:\Wayne Lapstop\FaceBundy Edition 2 and 3\app\build\intermediates\pre-dexed\debug\classes-6e73ef39f5479f3d0096633098c3fe8b1617b00f.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:layout_gravity="center_vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgPreviousLogClose"
+        android:layout_gravity="right"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_width="64px"
+        android:layout_height="64px" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="Hi,"
+            android:textColor="#fb3d3737"
+            style="@android:style/TextAppearance.Holo.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvPreviousLogName"
+            android:text="Buddy!"
+            android:layout_gravity="center"
+            style="@android:style/TextAppearance.Holo.Large"
+            android:textColor="#ffffa65d"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvPreviousLog"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        style="@android:style/TextAppearance.Holo.Small"
+        android:text="You've already clocked out a minute ago."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPreviousLog"
+        android:layout_gravity="center"
+        android:layout_width="260px"
+        android:layout_margin="10dp"
+        android:layout_height="260px"
+        android:scaleType="centerCrop"
+        android:src="@drawable/activation_bg"
+        app:border_width="1dp"
+        app:border_color="#ffb7cedd" />
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        style="@android:style/TextAppearance.Holo.Small"
+        android:text="What type of log do you want this to be?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.jeonsoft.facebundypro.views.CircleButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/btnConvertIn"
+            app:cb_text="Time In"
+            android:src="@drawable/sign_in"
+            app:cb_color="@color/pale_green"
+            app:cb_pressed_ring_width="2dip"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center" />
+        <com.jeonsoft.facebundypro.views.CircleButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/btnConvertOut"
+            app:cb_text="Time Out"
+            android:src="@drawable/sign_out"
+            app:cb_color="@color/pale_red"
+            app:cb_pressed_ring_width="2dip"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>

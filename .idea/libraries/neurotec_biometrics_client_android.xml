@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neurotec-biometrics-client-android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/neurotec-biometrics-client-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

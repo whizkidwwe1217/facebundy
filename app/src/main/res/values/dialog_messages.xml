@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_initializing">Please wait while the system is setting up your phone...</string>
+</resources>

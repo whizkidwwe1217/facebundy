@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_weight="0"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/face_bundy_launcher"
+            android:layout_margin="8dp"
+            app:border_width="1dp"
+            app:border_color="#ffb7bec8" />
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:textAppearance="@android:style/TextAppearance.Holo.Large"
+            android:text="9:00 AM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvCreationTime"
+            android:layout_toRightOf="@+id/tvTime"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            android:text="15 min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvActivity"
+            android:layout_below="@+id/tvTime"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:maxLines="3"
+            android:paddingTop="8dp"
+            android:text="Arrive in Buenos Aires, to be met by a Merito Travel representative, transfer and check in to the Hotel Republica (or similar). Afternoon and evening free. — 15 min ago."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvLocation"
+            android:gravity="right"
+            android:paddingRight="8dp"
+            android:layout_below="@+id/tvActivity"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:layout_alignParentRight="true"
+            android:paddingTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            android:text="— Merito Travel Hotel, Buenos Aires"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

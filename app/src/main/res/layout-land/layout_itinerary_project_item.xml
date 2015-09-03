@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rrHeader"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtProject"
+            android:textColor="@color/accent_color"
+            android:textStyle="bold"
+            android:textColorHint="@color/secondary_text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company/Project Name" />
+        <TextView
+            android:id="@+id/tvDate"
+            style="@android:style/Widget.Holo.Spinner"
+            android:paddingTop="8dp"
+            android:textColor="@color/light_primary"
+            android:text="July 27, 2015"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/edtProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/llTimeLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDate"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tvTimeIn"
+                style="@android:style/Widget.Holo.Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/light_primary"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:padding="8dp"
+                android:text="9:00 AM"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium" />
+            <TextView
+                android:text="to"
+                android:textColor="@color/light_primary"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvTimeOut"
+                android:textColor="@color/light_primary"
+                style="@android:style/Widget.Holo.Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtProject"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/tvTimeIn"
+                android:clickable="true"
+                android:padding="8dp"
+                android:text="6:00 PM"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="8dp"
+            android:layout_below="@+id/llTimeLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_action_location"
+                android:tint="@color/light_primary"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:textSize="11sp"
+                android:textColor="@color/light_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="near #564 Quirino Hi-Way, Novaliches, Quezon City" />
+         </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Tasks/Activities"
+                android:capitalize="characters"
+                android:padding="8dp"
+                android:textColor="@color/accent_color_dark"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lvItinerary"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <com.gc.materialdesign.views.ButtonFloat
+            android:id="@+id/btnNewLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="right|bottom"
+            android:background="@color/accent_color"
+            android:visibility="visible"
+            materialdesign:animate="true"
+            materialdesign:iconDrawable="@drawable/ic_action_add" />
+        </FrameLayout>
+</LinearLayout>
